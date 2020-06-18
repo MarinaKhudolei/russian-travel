@@ -1,6 +1,7 @@
 @import url(../vendor/normalize.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
+@import url(../blocks/content/content.css);
 @import url(../blocks/lead/lead.css);
 @import url(../blocks/intro/intro.css);
 @import url(../blocks/photo-grid/photo-grid.css);
@@ -21,38 +22,38 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 @media screen and (max-width: 1024px) {
+    .page {
+      max-width: 1024px;
+    }
+
+    .content {
+      max-width: 1024px;
+      margin: 0;
+    }
+
     .header {
         padding: 28px 48px 48px;
     }
 
     .lead {
-        width: 100%;
-        min-height: 962px;
-        margin: 0 48px 92px;
-    }
-
-    .lead__title {
-        margin: 0 104px 32px;
+        max-width: 928px;
+        margin: 0 48px 0;
     }
 
     .lead__subtitle {
-        margin: 0 144px 56px;
-    }
-
-    .lead__image {
-        height: 580px;
-        width: 928px;
+        margin: 0 0 56px;
     }
 
     .intro {
-        margin: 92px 286px 92px 48px;
+        margin-left: 48px;
     }
 
     .photo-grid {
         display: grid;
-        grid-template-columns: repeat(3, 300px);
-        grid-template-rows: repeat(4, 225px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-gap: 14px;
+        margin: 0 48px 92px;
     }
 
     .places {
@@ -60,7 +61,7 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .place {
-        grid-template-columns: 440px 456px;
+        grid-template-columns: 100fr 103fr;
         column-gap: 32px;
         margin: 0 0 84px;
     }
@@ -70,41 +71,35 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .cover {
-        margin: 0 0 92px;
         min-height: 640px;
-        width: 100%;
     }
 
     .cover__background {
         height: 640px;
     }
-
-    .footer {
-        width: 928px;
-    }
 }
 
 @media screen and (max-width: 768px) {
+    .page {
+      max-width: 768px;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0;
+    }
+
     .header {
         padding: 28px 24px 48px;
     }
 
     .lead {
-        min-height: 862px;
-        margin: 0 0 88px;
+        max-width: 100%;
+        margin: 0;
     }
 
     .lead__title {
-        margin: 0 24px 32px;
-    }
-
-    .lead__subtitle {
-        margin: 0 64px 56px;
-    }
-
-    .lead__image {
-        width: 100%;
-        height: 480px;
+        margin: 0 0 32px;
     }
 
     .lead__caption {
@@ -112,16 +107,14 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .intro {
-        width: 720px;
-        min-height: 428px;
+        max-width: 720px;
         margin: 88px 24px 88px;
     }
 
     .photo-grid {
-        width: 720px;
         display: grid;
-        grid-template-columns: repeat(2, 352px);
-        grid-template-rows: repeat(6, 264px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         grid-gap: 16px;
         margin: 0 24px 88px;
     }
@@ -131,9 +124,7 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .place {
-        display: grid;
-        grid-template-columns: 340px 352px;
-        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 100fr 105fr;
         column-gap: 28px;
         margin: 0 0 72px;
     }
@@ -142,12 +133,7 @@ html { font-family: 'Inter', sans-serif; }
         font-size: 42px;
         line-height: 1.1;
         font-weight: 900;
-        width: 340px;
-    }
-
-    .website {
-        width: 352px;
-
+        max-width: 340px;
     }
 
     .place__image {
@@ -162,7 +148,6 @@ html { font-family: 'Inter', sans-serif; }
     .cover {
         margin: 0 0 88px;
         min-height: 480px;
-        width: 100%;
     }
 
     .cover__background {
@@ -170,12 +155,20 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .footer {
-        width: 720px;
         margin: 0 24px 0;
     }
 }
 
 @media screen and (max-width: 320px) {
+    .page {
+      max-width: 320px;
+    }
+
+    .content {
+      max-width: 320px;
+      margin: 0;
+    }
+
     .header {
         padding: 16px 16px 48px;
       }
@@ -190,28 +183,18 @@ html { font-family: 'Inter', sans-serif; }
         font-size: 18px;
     }
 
-    .lead {
-        width: 320px;
-        min-height: 406px;
-        margin: 0 0 64px;
-    }
-
     .lead__title {
         font-size: 40px;
         line-height: 1.1;
-        width: 288px;
-        margin: 0 16px 16px;
+        max-width: 288px;
+        margin: 0 0 16px;
     }
 
     .lead__subtitle {
         font-size: 16px;
         line-height: 1.25;
-        width: 288px;
-        margin: 0 16px 40px;
-    }
-
-    .lead__image {
-        height: 200px;
+        max-width: 288px;
+        margin: 0 0 40px;
     }
 
     .lead__caption {
@@ -219,9 +202,8 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .intro {
-        width: 288px;
-        min-height: 752px;
-        margin: 0 16px 64px;
+        max-width: 288px;
+        margin: 64px 16px 64px;
     }
 
     .intro__title {
@@ -230,20 +212,19 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .photo-grid {
-        width: 288px;
         display: grid;
-        grid-template-columns: repeat(1, 288px);
-        grid-template-rows: repeat(12, 216px);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 1fr);
         grid-gap: 12px;
         margin: 0 16px 64px;
     }
 
     .places {
-        width: 320px;
         margin: 0 0 64px;
     }
 
     .place {
+        max-width: 320px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -251,7 +232,7 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .place__title {
-        width: 288px;
+        max-width: 288px;
         font-size: 32px;
         line-height: 1.09;
         margin: 0 16px 32px;
@@ -268,7 +249,6 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .place__paragraph {
-        width: 288px;
         font-size: 16px;
         line-height: 1.62;
         margin: 0 16px 24px;
@@ -286,22 +266,20 @@ html { font-family: 'Inter', sans-serif; }
     .cover__title {
        font-size: 32px;
        line-height: 1.09;
-       width: 250px;
+       max-width: 250px;
        height: auto;
        margin: 33px 16px 16px;
     }
 
     .cover__subtitle {
-        width: 288px;
+        max-width: 288px;
         height: auto;
         font-size: 14px;
         line-height: 1.14;
     }
 
     .footer {
-        width: 186px;
         height: 310px;
-        margin: 0 118px 0 16px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -309,7 +287,6 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .footer__list {
-        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

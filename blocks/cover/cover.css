@@ -10,7 +10,7 @@
     align-items: center;
     position: relative;
     min-height: 740px;
-    width: 1184px;
+    width: 100%;
 }
 
 .cover:hover .cover__background{

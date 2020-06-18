@@ -3,8 +3,9 @@
 @import url(./__paragraph/place__paragraph.css);
 
 .place {
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 460px 484px;
+    grid-template-columns: 100fr 105fr;
     grid-template-rows: repeat(2, auto);
     column-gap: 40px;
     row-gap: 48px;
@@ -12,4 +13,8 @@
     "title website"
     "image paragraph";
     margin: 0 0 80px;
+}
+
+.place:last-child {
+    margin: 0;
 }
