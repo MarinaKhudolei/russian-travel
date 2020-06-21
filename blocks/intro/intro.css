@@ -2,8 +2,29 @@
 @import url(./__text/intro__text.css);
 @import url(./__list/intro__list.css);
 @import url(./__list-item/intro__list-item.css);
+@import url(./__spanned/intro__spanned.css);
 
 .intro {
     max-width: 690px;
     margin: 92px auto 92px 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .intro {
+        margin-left: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        max-width: 720px;
+        margin: 88px 24px 88px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .intro {
+        max-width: 288px;
+        margin: 64px 16px 64px;
+    }
 }
