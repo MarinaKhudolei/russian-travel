@@ -39,7 +39,7 @@
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 567px) {
     .place {
         max-width: 320px;
         display: flex;
