@@ -1,20 +1,11 @@
+@import url(./__content/page__content.css);
+
 .page {
     background-color: #2A2C2F;
-    max-width: 100%;
+    font-family: 'Inter', 'Arial', sans-serif;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', 'Arial', sans-serif;
+    justify-content: center;
+    width: 100%;
   }
-
-  @media screen and (max-width: 1024px) {
-      .page {
-        max-width: 1024px;
-      }
-  }
-
-@media screen and (max-width: 768px) {
-    .page {
-      max-width: 100%;
-    }
-}
